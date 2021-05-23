@@ -19,7 +19,7 @@ function makeTextInputSuccess(input) {
 }
 
 form.addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // It will prevent the form being from being reset.
 
     if (userName.value === '') {
         showError(userName, "Username is mandatory");
@@ -36,11 +36,12 @@ form.addEventListener('submit', function(e) {
         makeTextInputSuccess(email);
     }
     if (password.value === '') {
-        showError(password, "Please enter your password.");
+        showError(password, "Please enter your password");
     } else {
         const values = checkPasswordStrength(password.value)
         if (!values[0]) {
             showError(password, values[1])
+            return
         } else {
             makeTextInputSuccess(password);
         }
