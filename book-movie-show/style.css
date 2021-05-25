@@ -20,7 +20,7 @@ body {
     margin: 20px 0;
 }
 
-.seat {
+.seat , .seat-l{
     background-color: rgb(255, 247, 247);
     height: 15px;
     width: 18px;
@@ -39,7 +39,7 @@ body {
     margin-right: 20px;
 }
 
-.selected {
+.selected, .selected-l {
     background-color: rgb(23, 238, 23);
     height: 15px;
     width: 18px;
@@ -48,7 +48,7 @@ body {
     border-top-right-radius: 6px;
 }
 
-.occupied {
+.occupied , .occupied-l{
     background-color: red;
     height: 15px;
     width: 18px;
@@ -104,3 +104,10 @@ Whenever cursor hovers around avilable seats, change it to pointer.
     display: flex; /* display: flex is flexible elements will adjust*/
 }
 
+.checkout button {
+    width: 150px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: rgb(199, 247, 247);
+    color: black;
+}
